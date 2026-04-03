@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chlgrw4mw5ngn"]
+
+[ext_resource type="Script" uid="uid://eb104ajn2nu2" path="res://scripts/label.gd" id="1_fdwh8"]
+
+[node name="label" type="Label" unique_id=2014969299]
+script = ExtResource("1_fdwh8")

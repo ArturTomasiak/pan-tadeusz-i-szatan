@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterTemplate" format=3 uid="uid://b4yfgn5hgj2a0"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_m05ho"]
+[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/character_template.gd" id="2_myimp"]
+
+[resource]
+script = ExtResource("2_myimp")
+display_name = "Jacek Soplica"
+max_hp = 300
+agility = 9
+sprite_path = "res://data/combat/characters/jacek/"
+animations = Dictionary[String, int]({
+"attack": 5,
+"idle": 1
+})
+metadata/_custom_type_script = "uid://dmh4tebyg1edl"

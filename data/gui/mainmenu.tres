@@ -1,0 +1,39 @@
+[gd_resource type="Theme" format=3 uid="uid://db3pahbxsn4om"]
+
+[ext_resource type="FontFile" uid="uid://c2u2r00grxqm3" path="res://data/PlainPixel-Regular.ttf" id="1_te6qp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvh7p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbpse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbjbq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipyno"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrm3i"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.3019633, 0.2936827, 0.12381818, 1)
+Button/colors/font_hover_color = Color(0.23529412, 0.22745098, 0.09019608, 1)
+Button/colors/font_hover_pressed_color = Color(0.23529412, 0.22745098, 0.09019608, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.4549511, 0.43823314, 0.20800498, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(0.23529412, 0.22745098, 0.09019608, 1)
+Button/colors/icon_hover_color = Color(0.23529412, 0.22745098, 0.09019608, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_te6qp")
+Button/styles/disabled = SubResource("StyleBoxEmpty_kvh7p")
+Button/styles/focus = SubResource("StyleBoxEmpty_vbpse")
+Button/styles/hover = SubResource("StyleBoxEmpty_vbjbq")
+Button/styles/normal = SubResource("StyleBoxEmpty_ipyno")
+Button/styles/pressed = SubResource("StyleBoxEmpty_wrm3i")

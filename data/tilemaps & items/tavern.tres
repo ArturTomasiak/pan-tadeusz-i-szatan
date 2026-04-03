@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" format=3 uid="uid://34ucvxaohbnt"]
+
+[ext_resource type="Texture2D" uid="uid://ce053suks6sj0" path="res://data/tilemaps & items/tavern.png" id="1_4cgat"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nw64s"]
+texture = ExtResource("1_4cgat")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.935338, -8, 8, -8, 8, 8, -6.2950554, 8, -6.115197, 8, -5.935338, 3.2374573)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -5.3957615, 8, -8, 8)
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(4, 9)
+2:2/0 = 0
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, 6)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_nw64s")

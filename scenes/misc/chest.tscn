@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnu47co8vqdls"]
+
+[ext_resource type="Texture2D" uid="uid://ckyn6o6jxsldy" path="res://data/tilemaps & items/chest.png" id="1_md6nn"]
+[ext_resource type="Script" uid="uid://d0usdqti4w4xr" path="res://scripts/chest.gd" id="1_tktan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md6nn"]
+size = Vector2(14, 13)
+
+[node name="chest" type="CharacterBody2D" unique_id=1916286618]
+script = ExtResource("1_tktan")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=152964496]
+texture = ExtResource("1_md6nn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1355862768]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_md6nn")

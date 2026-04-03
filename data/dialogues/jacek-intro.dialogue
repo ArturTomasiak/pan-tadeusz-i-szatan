@@ -1,0 +1,16 @@
+~ start
+Jacek Soplica: Słyszałem, tedy gotów jestem.
+- W takim razie podążaj za mną. => recruit
+- Czy wiesz, gdzie bym mógł znaleźć Bogusławę? => boguslawa
+- Czyliż już nie kusisz się, by odmienić zdanie moje? => kres
+- Zaczekaj tu na mój powrót. => END
+~ boguslawa
+Jacek Soplica: Niekiedy wspomaga Jankiela w prowadzeniu karczmy; poza tym ją nie widuję.
+=> start
+~ kres
+Jacek Soplica: Jam pragnął uchylić Cię od zguby Twej; teraz zaś nic mi nie pozostaje, jeno łkać nad mlekiem rozlanym.
+=> start
+~ recruit
+do game_state.add_party_member("jacek")
+do wrapper.after_jacek_recruit()
+=> END

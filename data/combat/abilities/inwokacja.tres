@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://dp6r8l8chokv5"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_rp5k0"]
+
+[resource]
+script = ExtResource("1_rp5k0")
+id = &"1"
+display_name = "Inwokacja"
+description = "Usypia wrogów na turę"
+cost_type = 1
+cost_amount = 20
+target_type = 3
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://cfq26s5ps0j2u"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_qm6g6"]
+
+[resource]
+script = ExtResource("1_qm6g6")
+id = &"3"
+display_name = "Magiczny Pocisk"
+description = "Przeciwnik otrzymuje 20dmg"
+cost_amount = 15
+target_type = 4
+hp_delta = 20
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

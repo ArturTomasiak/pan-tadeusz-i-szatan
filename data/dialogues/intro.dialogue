@@ -1,0 +1,46 @@
+do dialogue_audio.play("intro/0")
+Litwo! Ojczyzno moja! lecz cóż to się stało?\nJakby serce młodzieńca obłęd opętało.\nJuż nie w sadach się błąka, nie wzdycha ku Zosi,\nLecz nocą w borach dzikich tajemne księgi nosi.
+do wrapper.intro_fade_in()
+do dialogue_audio.play("intro/1")
+Szatan: Wzywałeś mię, kurwa.
+do dialogue_audio.play("intro/2")
+Tadeusz Soplica: Słowa wciąż się powtarzają,\nJak echo cudzej woli w ustach ludzkich drgają.\nI jam niegdyś powtarzał.
+do dialogue_audio.play("intro/3")
+Szatan: Więc ustałeś… i cóż w tym?
+do dialogue_audio.play("intro/4")
+Tadeusz Soplica: Świat nie baczy na czyny, choćbym zszedł z drogi prawa,\nChoćbym krew przelał własną, wciąż ta sama sprawa.\nKrąg mnie więzi, wciąż wracam, jakby nic się nie stało,\nJakby życie me było snem, co wciąż trwało.
+do dialogue_audio.play("intro/5")
+Szatan: Pragnieszże tedy zmiany?
+do dialogue_audio.play("intro/6")
+Tadeusz Soplica: Nie, pragnę ukojenia.\nChcę kres położyć losom, chcę zniknąć z istnienia.
+do dialogue_audio.play("intro/7")
+Szatan: Jankiel ma żonę, i ona z narodu semickiego,\nLecz przodek jego zagrabił, co było mojego.\nDo dziś Bogusława nosi znak mój tajemny.\nTalizman, co w mroku żyje i czyni zamęty.\n
+do dialogue_audio.play("intro/8")
+Tadeusz Soplica: Mamże tedy talizman jej z dłoni wydarzyć?
+do dialogue_audio.play("intro/9")
+Szatan: Masz ją porwać. Czysty chwalący yachwe jest mi cenny.
+do dialogue_audio.play("intro/10")
+Tadeusz Soplica: A wtenczas, czy wszystek umrę?
+do dialogue_audio.play("intro/11")
+Szatan: Tak.
+do dialogue_audio.play("intro/12")
+Tadeusz Soplica: Zgadzam się tedy.
+do dialogue_audio.play("intro/13")
+Szatan: Nie spiesz się z przysięgą. Gdy krąg zostanie przerwany, ład ustąpi miejsca zamętowi. A ty, chuju, możesz nie zdołać przez to przejść. Oto księga słów bożych, które manipulują istotami świata. Przyda ci się.
+do dialogue_audio.play("intro/14")
+Tadeusz Soplica: A jeśli śmierć mnie weźmie, cóż się ze mną stanie?
+do dialogue_audio.play("intro/15")
+Szatan: Krąg cię już trzymać nie będzie, lecz wiedz, marny panie,\nNie dopuszczę do kresu, jeśli padniesz w tej sprawie,\nResztę żywotów spędzisz jako latarnik, jak chujem po trawie.
+do dialogue_audio.play("intro/16")
+Tadeusz Soplica: Milsza mi samotność niż ten cykl przeklęty.
+do dialogue_audio.play("intro/17")
+Szatan: Będziesz niemcem.
+do dialogue_audio.play("intro/18")
+Tadeusz Soplica: Tego znieść nie mogę, święty!
+do dialogue_audio.play("intro/19")
+Szatan: A więc warunki ustalone. Wkrótce ujrzysz podobiznę boga. Spluń chyżo, a umowa stanie się prawdą.
+do wrapper.intro_god_visible()
+do dialogue_audio.play("intro/20")
+Tadeusz Soplica: htfu!
+do wrapper.after_intro()
+do dialogue_audio.stop()

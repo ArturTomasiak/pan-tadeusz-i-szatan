@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterTemplate" format=3 uid="uid://hwfdtp5bex0h"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_ns2to"]
+[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/character_template.gd" id="2_bok7a"]
+
+[resource]
+script = ExtResource("2_bok7a")
+display_name = "Strzyga"
+max_hp = 80
+sound = 2
+attack = 16
+agility = 10
+sprite_path = "res://data/combat/characters/strzyga/"
+animations = Dictionary[String, int]({
+"attack": 2,
+"idle": 1
+})
+metadata/_custom_type_script = "uid://dmh4tebyg1edl"

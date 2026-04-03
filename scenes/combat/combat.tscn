@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dmucvp3e3byud"]
+
+[ext_resource type="Script" uid="uid://dnnv5x5xu2ncr" path="res://scripts/combat.gd" id="1_5vqsm"]
+[ext_resource type="AudioStream" uid="uid://ds6fpdp5yg2kb" path="res://data/ost/battle.mp3" id="2_6aonj"]
+[ext_resource type="Theme" uid="uid://7ep8c3gv2gfc" path="res://data/gui/esc.tres" id="3_pqpfu"]
+[ext_resource type="Texture2D" uid="uid://c3m6k2i56odn2" path="res://data/gui/ui-wide.png" id="4_4voa6"]
+[ext_resource type="Script" uid="uid://cxjiwd1l7rjx5" path="res://scripts/gui.gd" id="4_jgg25"]
+
+[node name="combat" type="Node2D" unique_id=738287926]
+script = ExtResource("1_5vqsm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=466118529]
+stream = ExtResource("2_6aonj")
+volume_db = -2.0
+autoplay = true
+parameters/looping = false
+
+[node name="party" type="Node2D" parent="." unique_id=532335471]
+
+[node name="enemy" type="Node2D" parent="." unique_id=1450576109]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1461332245]
+follow_viewport_enabled = true
+
+[node name="ui" type="Control" parent="CanvasLayer" unique_id=1926889127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -89.999985
+offset_right = 319.99994
+offset_bottom = 179.99994
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme = ExtResource("3_pqpfu")
+script = ExtResource("4_jgg25")
+
+[node name="vh" type="HBoxContainer" parent="CanvasLayer/ui" unique_id=2121123424]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 327.5
+offset_right = 725.0
+offset_bottom = 447.5
+
+[node name="t1" type="TextureRect" parent="CanvasLayer/ui/vh" unique_id=673992761]
+layout_mode = 2
+texture = ExtResource("4_4voa6")
+
+[node name="action" type="VBoxContainer" parent="CanvasLayer/ui/vh/t1" unique_id=834287183]
+layout_mode = 0
+offset_top = 7.499999
+offset_right = 319.99997
+offset_bottom = 109.999985
+theme_override_constants/separation = -2
+
+[node name="attack" type="Button" parent="CanvasLayer/ui/vh/t1/action" unique_id=1914382642]
+layout_mode = 2
+text = "atak"
+
+[node name="abilities" type="Button" parent="CanvasLayer/ui/vh/t1/action" unique_id=1505076514]
+layout_mode = 2
+text = "zdolności"
+
+[node name="defend" type="Button" parent="CanvasLayer/ui/vh/t1/action" unique_id=450873500]
+layout_mode = 2
+text = "obrona"
+
+[node name="t2" type="TextureRect" parent="CanvasLayer/ui/vh" unique_id=1428807307]
+layout_mode = 2
+texture = ExtResource("4_4voa6")
+
+[node name="party" type="VBoxContainer" parent="CanvasLayer/ui/vh/t2" unique_id=618783365]
+layout_mode = 0
+offset_left = 0.49999237
+offset_top = 7.499999
+offset_right = 317.99997
+offset_bottom = 109.999985
+theme_override_constants/separation = -5
+
+[node name="target" type="Control" parent="CanvasLayer/ui" unique_id=215151140]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1536342721]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=361880358]
+show_behind_parent = true
+offset_left = -185.0
+offset_top = -109.0
+offset_right = 180.0
+offset_bottom = 105.0
+color = Color(0.543672, 0.6581968, 0.8555017, 1)

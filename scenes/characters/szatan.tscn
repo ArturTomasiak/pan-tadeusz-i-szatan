@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c40726ed7v3tl"]
+
+[ext_resource type="Texture2D" uid="uid://c4g5dokqjk6lq" path="res://data/characters/szatan.png" id="1_6c1v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1h23"]
+size = Vector2(13, 13)
+
+[node name="szatan" type="CharacterBody2D" unique_id=1633568870]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2116425759]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_w1h23")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=204635918]
+texture = ExtResource("1_6c1v5")

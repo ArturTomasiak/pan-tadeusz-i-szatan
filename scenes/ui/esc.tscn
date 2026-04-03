@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://8kj3alundlyp"]
+
+[ext_resource type="Theme" uid="uid://7ep8c3gv2gfc" path="res://data/gui/esc.tres" id="1_yeasi"]
+[ext_resource type="Script" uid="uid://kdn10kb1sw3j" path="res://scripts/esc.gd" id="2_nwrvu"]
+[ext_resource type="Texture2D" uid="uid://c3m6k2i56odn2" path="res://data/gui/ui-wide.png" id="2_wmeor"]
+
+[node name="esc" type="Control" unique_id=817486405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yeasi")
+script = ExtResource("2_nwrvu")
+
+[node name="topbar" type="NinePatchRect" parent="." unique_id=1339216976]
+layout_mode = 0
+offset_right = 290.0
+offset_bottom = 24.0
+texture = ExtResource("2_wmeor")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="topbar" unique_id=426387419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="inventory" type="Button" parent="topbar/HBoxContainer" unique_id=1843298132]
+layout_mode = 2
+text = "Ekwipunek"
+
+[node name="abilities" type="Button" parent="topbar/HBoxContainer" unique_id=147773151]
+layout_mode = 2
+text = "Zdolności
+"
+
+[node name="save" type="Button" parent="topbar/HBoxContainer" unique_id=434156943]
+layout_mode = 2
+text = "Zapisz"
+
+[node name="load" type="Button" parent="topbar/HBoxContainer" unique_id=677459685]
+layout_mode = 2
+text = "Wczytaj"
+
+[node name="settings" type="Button" parent="topbar/HBoxContainer" unique_id=1862098549]
+layout_mode = 2
+text = "Ustawienia
+"
+
+[node name="quit" type="Button" parent="topbar/HBoxContainer" unique_id=743335532]
+layout_mode = 2
+text = "wyjdź"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6rvtr0hf6kc5"
+path="res://.godot/imported/jacek-intro.dialogue-30243994cff2cf08f4f65f6f0604a0ca.tres"
+
+[deps]
+
+source_file="res://data/dialogues/jacek-intro.dialogue"
+dest_files=["res://.godot/imported/jacek-intro.dialogue-30243994cff2cf08f4f65f6f0604a0ca.tres"]
+
+[params]
+
+defaults=true

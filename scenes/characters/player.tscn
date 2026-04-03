@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://d0qh0cafkn8d1"]
+
+[ext_resource type="Script" uid="uid://d07adrbqx3532" path="res://scripts/player.gd" id="1_oihyf"]
+[ext_resource type="Texture2D" uid="uid://b3gyrcy4hs2eo" path="res://data/tadeusz/down-1.png" id="1_pq8s5"]
+[ext_resource type="Texture2D" uid="uid://mr60hwair75u" path="res://data/tadeusz/down-2.png" id="2_m6phi"]
+[ext_resource type="Texture2D" uid="uid://dtj1pyispcpux" path="res://data/tadeusz/left-1.png" id="3_oihyf"]
+[ext_resource type="Texture2D" uid="uid://qkqh0g1i8rol" path="res://data/tadeusz/left-2.png" id="4_7lms1"]
+[ext_resource type="Texture2D" uid="uid://1vat6vp1788b" path="res://data/tadeusz/right-1.png" id="5_ufbvs"]
+[ext_resource type="Texture2D" uid="uid://blehak70vs1lb" path="res://data/tadeusz/right-2.png" id="6_mqro2"]
+[ext_resource type="Texture2D" uid="uid://bf35yx6c1lroj" path="res://data/tadeusz/up-1.png" id="7_bpxo2"]
+[ext_resource type="Texture2D" uid="uid://cepj6tf212t6k" path="res://data/tadeusz/up-2.png" id="8_bb7xv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msnu2"]
+size = Vector2(14, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m0xnk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pq8s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m6phi")
+}],
+"loop": true,
+"name": &"move_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oihyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7lms1")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ufbvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mqro2")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bpxo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bb7xv")
+}],
+"loop": true,
+"name": &"move_up",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=560771864]
+script = ExtResource("1_oihyf")
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1708935210]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_msnu2")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=936911974]
+sprite_frames = SubResource("SpriteFrames_m0xnk")
+animation = &"move_up"
+
+[node name="raycast" type="RayCast2D" parent="." unique_id=1479016634]

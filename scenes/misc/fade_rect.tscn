@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://coyadwixb1tyc"]
+
+[ext_resource type="Script" uid="uid://sp65e7jh7jvh" path="res://scripts/fade_rect.gd" id="1_elj8t"]
+
+[node name="fade_rect" type="ColorRect" unique_id=245137231]
+top_level = true
+offset_left = -9.0
+offset_top = -5.0
+offset_right = 609.0
+offset_bottom = 348.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_elj8t")

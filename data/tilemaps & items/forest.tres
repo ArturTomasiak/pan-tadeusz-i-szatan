@@ -1,0 +1,23 @@
+[gd_resource type="TileSet" format=3 uid="uid://bcw17tku7xdp2"]
+
+[ext_resource type="Texture2D" uid="uid://3ka6oh0o8p7d" path="res://data/tilemaps & items/forest.png" id="1_nj8k2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_csyu1"]
+texture = ExtResource("1_nj8k2")
+6:0/0 = 0
+6:1/0 = 0
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.6187286, 8, 4.6763268, 8, 4.856186, 14.928274, -0.8992939, 14.3887005)
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.6187286, 4.3166103, 1.978445, 5.215904, 2.1583042, 8, 2.1583042, 13.309547, -0.17985916, 13.489405)
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.6187286, 8, 4.6763268, 8, 4.856186, 14.928274, -0.8992939, 14.3887005)
+7:0/size_in_atlas = Vector2i(2, 2)
+7:0/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_csyu1")

@@ -1,0 +1,72 @@
+[gd_resource type="Theme" format=3 uid="uid://7ep8c3gv2gfc"]
+
+[ext_resource type="FontFile" uid="uid://c2u2r00grxqm3" path="res://data/PlainPixel-Regular.ttf" id="1_6iak1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jdlc0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnvfa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvxc5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lotmf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glt6q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6iak1"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 15
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ln0j"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+Button/colors/font_focus_color = Color(0.61854994, 0.579447, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.87938523, 0.8183879, 0, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 12
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_6iak1")
+Button/styles/disabled = SubResource("StyleBoxEmpty_jdlc0")
+Button/styles/focus = SubResource("StyleBoxEmpty_bnvfa")
+Button/styles/hover = SubResource("StyleBoxEmpty_fvxc5")
+Button/styles/normal = SubResource("StyleBoxEmpty_lotmf")
+Button/styles/pressed = SubResource("StyleBoxEmpty_glt6q")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 9
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 3
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_6iak1")
+Label/styles/focus = SubResource("StyleBoxFlat_6iak1")
+Label/styles/normal = SubResource("StyleBoxEmpty_3ln0j")

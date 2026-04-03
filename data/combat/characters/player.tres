@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterTemplate" format=3 uid="uid://iijv7u2klqkc"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_h8lwj"]
+[ext_resource type="Resource" uid="uid://dp6r8l8chokv5" path="res://data/combat/abilities/inwokacja.tres" id="2_5vh66"]
+[ext_resource type="Resource" uid="uid://c7fqxjkojr8ia" path="res://data/combat/abilities/równowaga.tres" id="3_ufxa4"]
+[ext_resource type="Resource" uid="uid://fywaukqcf8w6" path="res://data/combat/abilities/ognista_kula.tres" id="4_20jhu"]
+[ext_resource type="Resource" uid="uid://cfq26s5ps0j2u" path="res://data/combat/abilities/magiczny_pocisk.tres" id="5_11xho"]
+[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/character_template.gd" id="6_ngcfj"]
+
+[resource]
+script = ExtResource("6_ngcfj")
+display_name = "Tadeusz Soplica"
+max_hp = 300
+abilities = Array[ExtResource("1_h8lwj")]([ExtResource("2_5vh66"), ExtResource("3_ufxa4"), ExtResource("4_20jhu"), ExtResource("5_11xho")])
+agility = 8
+sprite_path = "res://data/combat/characters/tadeusz/"
+animations = Dictionary[String, int]({
+"attack": 3,
+"idle": 1,
+"inwokacja": 1
+})
+metadata/_custom_type_script = "uid://dmh4tebyg1edl"

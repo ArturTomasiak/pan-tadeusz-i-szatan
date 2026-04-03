@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://uxkfvvn77fg4"]
+
+[ext_resource type="Texture2D" uid="uid://beavnnw27axv7" path="res://data/gui/main.png" id="1_c040g"]
+[ext_resource type="Theme" uid="uid://db3pahbxsn4om" path="res://data/gui/mainmenu.tres" id="1_nudk7"]
+[ext_resource type="Script" uid="uid://clxvsqa5gbenq" path="res://scripts/mainmenu.gd" id="2_cix78"]
+[ext_resource type="Texture2D" uid="uid://j5ygryw4d2so" path="res://data/gui/buttonbck.png" id="3_wxwbn"]
+[ext_resource type="Texture2D" uid="uid://da40ppajco1rd" path="res://data/gui/check-no-h.png" id="5_npkxa"]
+[ext_resource type="Texture2D" uid="uid://c7uhwxcco34yx" path="res://data/gui/check-no.png" id="6_bl2cu"]
+[ext_resource type="Texture2D" uid="uid://bvxxtnwwim11y" path="res://data/gui/check-yes-h.png" id="7_n3v8l"]
+[ext_resource type="Texture2D" uid="uid://eso0y5j6acku" path="res://data/gui/check-yes.png" id="8_bl2cu"]
+[ext_resource type="AudioStream" uid="uid://mwatmcyglu50" path="res://data/ost/mainmenu.mp3" id="8_npkxa"]
+
+[node name="mainmenu" type="Control" unique_id=1213178331]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_nudk7")
+script = ExtResource("2_cix78")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1430895837]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_c040g")
+
+[node name="Label" type="Label" parent="." unique_id=1831984859]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -9.0
+offset_right = 195.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Pan Tadeusz i Szatan"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1276940212]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 80.0
+offset_bottom = 128.0
+texture = ExtResource("3_wxwbn")
+
+[node name="main" type="Control" parent="." unique_id=881457074]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_nudk7")
+
+[node name="settings" type="Button" parent="main" unique_id=1475643772]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 70.0
+offset_right = 65.0
+offset_bottom = 94.0
+mouse_filter = 2
+text = "Ustawienia"
+
+[node name="load" type="Button" parent="main" unique_id=1411492114]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 52.0
+offset_right = 71.0
+offset_bottom = 76.0
+mouse_filter = 2
+text = "Wczytaj Grę"
+
+[node name="exit" type="Button" parent="main" unique_id=1818361235]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 87.0
+offset_right = 65.0
+offset_bottom = 111.0
+mouse_filter = 2
+text = "Wyjdź z Gry"
+
+[node name="new" type="Button" parent="main" unique_id=509498918]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 37.0
+offset_right = 64.0
+offset_bottom = 61.0
+mouse_filter = 2
+text = "Nowa Gra"
+
+[node name="settings" type="Control" parent="." unique_id=2085538635]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_nudk7")
+
+[node name="back" type="Button" parent="settings" unique_id=498553946]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 53.0
+offset_bottom = 61.0
+mouse_filter = 2
+text = "Wróć"
+
+[node name="fsoff" type="TextureButton" parent="settings" unique_id=451294865]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 63.0
+offset_right = 91.0
+offset_bottom = 95.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("5_npkxa")
+texture_focused = ExtResource("6_bl2cu")
+
+[node name="fson" type="TextureButton" parent="settings" unique_id=157231295]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 63.0
+offset_right = 91.0
+offset_bottom = 95.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_n3v8l")
+texture_focused = ExtResource("8_bl2cu")
+
+[node name="fslabel" type="Label" parent="settings" unique_id=415041013]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 57.0
+offset_right = 59.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "fullscreen"
+
+[node name="vollabel" type="Label" parent="settings" unique_id=1905706519]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 78.0
+offset_right = 72.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "volume
+"
+
+[node name="volume" type="HSlider" parent="settings" unique_id=778371270]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 95.0
+offset_right = 265.99997
+offset_bottom = 143.0
+scale = Vector2(0.2, 0.2)
+value = 50.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=112485817]
+stream = ExtResource("8_npkxa")
+autoplay = true
+parameters/looping = true

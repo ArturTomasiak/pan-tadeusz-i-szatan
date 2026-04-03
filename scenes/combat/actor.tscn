@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bmosqsk3uiphq"]
+
+[ext_resource type="Script" uid="uid://cy0d20jfw0sec" path="res://scripts/actor.gd" id="1_0lwmd"]
+
+[node name="actor" type="Node2D" unique_id=714073007]
+script = ExtResource("1_0lwmd")
+
+[node name="marker" type="Marker2D" parent="." unique_id=1123236789]
+position = Vector2(4, -12)
+
+[node name="audio" type="AudioStreamPlayer2D" parent="." unique_id=218799969]
+volume_db = 1.0
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=828175238]
