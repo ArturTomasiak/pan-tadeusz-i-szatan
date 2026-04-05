@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c7qjaae4o3kr4"]
+
+[ext_resource type="AudioStream" uid="uid://c2rlp0ptb1efb" path="res://data/ost/overworld.mp3" id="1_snkjf"]
+
+[node name="overworld_music" type="AudioStreamPlayer" unique_id=1301850352]
+stream = ExtResource("1_snkjf")
+autoplay = true
+parameters/looping = true

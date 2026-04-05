@@ -1,7 +1,7 @@
 class_name Actor extends Node2D
 
-const growl_lines : int = 5
-const human_lines : int = 18
+const growl_lines : int = 4
+const human_lines : int = 9
 const orc_lines : int = 3
 
 var character: CharacterTemplate
@@ -41,12 +41,14 @@ func play_hit_animation() -> void:
 
 func hit_sound() -> void:
 	var i : int
-	if character.sound == CharacterTemplate.Sound.HUMAN && !is_enemy: 
-		i = game_state.rng.randi_range(0, human_lines)
-		audio.stream = load("res://data/combat/human/" + str(i) + ".mp3")
-	else: 
-		i = game_state.rng.randi_range(0, growl_lines)
-		audio.stream = load("res://data/combat/growl/" + str(i) + ".mp3")
+	match character.sound:
+		CharacterTemplate.Sound.HUMAN:
+			if !is_enemy:
+				i = game_state.rng.randi_range(0, human_lines)
+				audio.stream = load("res://data/combat/human/" + str(i) + ".mp3")
+		CharacterTemplate.Sound.GROWL:
+			i = game_state.rng.randi_range(0, growl_lines)
+			audio.stream = load("res://data/combat/growl/" + str(i) + ".mp3")
 	if audio.playing:
 		audio.stop()
 	audio.play()

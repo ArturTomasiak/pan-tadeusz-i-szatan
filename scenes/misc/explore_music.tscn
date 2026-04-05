@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://c7qjaae4o3kr4"]
-
-[ext_resource type="AudioStream" uid="uid://k8jyb4vcrccp" path="res://data/ost/explore.mp3" id="1_eqmli"]
-
-[node name="explore_music" type="AudioStreamPlayer" unique_id=1301850352]
-stream = ExtResource("1_eqmli")
-autoplay = true
-parameters/looping = true

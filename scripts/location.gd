@@ -4,7 +4,7 @@ var safe : bool = false
 @onready var entrance_marker : Node2D = $entrance_marker
 @onready var fade_rect : ColorRect    = $fade_rect
 @onready var player : Player          = get_node_or_null("player")
-const music : PackedScene = preload("res://scenes/misc/explore_music.tscn")
+const music : PackedScene = preload("res://scenes/misc/overworld.tscn")
 
 var distance_accumulation: float = 0.0
 var last_player_pos: Vector2 = Vector2(0,0)

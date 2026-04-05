@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dmucvp3e3byud"]
 
 [ext_resource type="Script" uid="uid://dnnv5x5xu2ncr" path="res://scripts/combat.gd" id="1_5vqsm"]
-[ext_resource type="AudioStream" uid="uid://ds6fpdp5yg2kb" path="res://data/ost/battle.mp3" id="2_6aonj"]
+[ext_resource type="AudioStream" uid="uid://c4hvykl1vpdo2" path="res://data/ost/battle.mp3" id="2_6aonj"]
 [ext_resource type="Theme" uid="uid://7ep8c3gv2gfc" path="res://data/gui/esc.tres" id="3_pqpfu"]
 [ext_resource type="Texture2D" uid="uid://c3m6k2i56odn2" path="res://data/gui/ui-wide.png" id="4_4voa6"]
 [ext_resource type="Script" uid="uid://cxjiwd1l7rjx5" path="res://scripts/gui.gd" id="4_jgg25"]
@@ -11,9 +11,9 @@ script = ExtResource("1_5vqsm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=466118529]
 stream = ExtResource("2_6aonj")
-volume_db = -2.0
+volume_db = 5.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="party" type="Node2D" parent="." unique_id=532335471]
 

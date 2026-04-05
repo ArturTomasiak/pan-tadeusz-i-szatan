@@ -1,7 +1,7 @@
 # Parodia-Kontynuacja "Pana Tadeusza"
 
 > [!NOTE]
-> To jest niedokończony prototyp stworzony na rzecz studiów
+> To jest niedokończony prototyp
 
 Wciel się w rolę Tadeusza Soplicę, który wraz z Jackiem Soplicą próbuję uciec z cyklu powtarzania tych samych wydarzeń jako protagoniści lektury.
 
@@ -13,12 +13,15 @@ Wciel się w rolę Tadeusza Soplicę, który wraz z Jackiem Soplicą próbuję u
 
 - System dialogów:
   - Dialogue Manager 3
-- Muzyka:
-  - Ścieżka dźwiękowa Shin Megami Tensei II
 - Aktorzy Głosowi
   - Tadeusz Maderski, Szatan
   - Filip Bone,       Tadeusz Soplica
   - Anna Turowska,    Narracja
   - Dawid Filip,      SFX
+
+## wersje
+- 0.8.1
+  - zmieniono soundtrack na autorski
+  - poprawiono mixing audio
 ---
 Miłej zabawy!
