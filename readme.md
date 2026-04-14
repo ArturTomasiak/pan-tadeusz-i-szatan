@@ -27,5 +27,8 @@ Wciel się w rolę Tadeusza Soplicę, który wraz z Jackiem Soplicą próbuję u
   - naprawiono slider dzwięku
   - poprawki ui w walce
   - zdolności
+- 0.8.3
+  - poprawki błędów/niedociągnięć
+  - nowe zdolności + przeciwnicy używają zdolności
 ---
 Miłej zabawy!

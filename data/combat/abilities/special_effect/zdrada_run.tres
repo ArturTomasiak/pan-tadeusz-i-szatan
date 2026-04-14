@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_f565x")
-effect_type = 2
+effect_type = 3
 display_name = "Zdrada Run"
 description = "Pozbywa przeciwnika zdolności magicznych na trzy tury"
 cost_amount = 40

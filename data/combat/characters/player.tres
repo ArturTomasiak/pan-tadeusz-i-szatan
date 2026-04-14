@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_h8lwj"]
 [ext_resource type="Resource" uid="uid://fywaukqcf8w6" path="res://data/combat/abilities/damage/furia_zywiolow.tres" id="4_20jhu"]
+[ext_resource type="Resource" uid="uid://dp6r8l8chokv5" path="res://data/combat/abilities/special_effect/inwokacja.tres" id="4_h8lwj"]
+[ext_resource type="Resource" uid="uid://djmxejeccgspw" path="res://data/combat/abilities/special_effect/zdrada_run.tres" id="5_5vh66"]
 [ext_resource type="Resource" uid="uid://cfq26s5ps0j2u" path="res://data/combat/abilities/damage/krwawa_inkantacja.tres" id="5_11xho"]
 [ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/templates/character_template.gd" id="6_ngcfj"]
 
@@ -12,7 +14,7 @@ intelligence = 12
 mysticism = 14
 agility = 8
 display_name = "Tadeusz Soplica"
-abilities = Array[ExtResource("1_h8lwj")]([ExtResource("5_11xho"), ExtResource("4_20jhu")])
+abilities = Array[ExtResource("1_h8lwj")]([ExtResource("5_11xho"), ExtResource("4_20jhu"), ExtResource("4_h8lwj"), ExtResource("5_5vh66")])
 sprite_path = "res://data/combat/characters/tadeusz/"
 animations = Dictionary[String, int]({
 "attack": 3,

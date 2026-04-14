@@ -69,10 +69,16 @@ text = "abilities
 layout_mode = 2
 text = "defend"
 
-[node name="abilities" type="HFlowContainer" parent="CanvasLayer/ui/c/h/p1" unique_id=2046252503]
+[node name="m" type="MarginContainer" parent="CanvasLayer/ui/c/h/p1" unique_id=840778353]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 13
+
+[node name="abilities" type="HFlowContainer" parent="CanvasLayer/ui/c/h/p1/m" unique_id=2046252503]
+layout_mode = 2
+last_wrap_alignment = 1
 
 [node name="p2" type="PanelContainer" parent="CanvasLayer/ui/c/h" unique_id=233906271]
 custom_minimum_size = Vector2(0, 50)

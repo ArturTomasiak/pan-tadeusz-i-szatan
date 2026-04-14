@@ -5,20 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cjhsx5r51i84o" path="res://scenes/misc/scene_trigger.tscn" id="2_6khdi"]
 [ext_resource type="PackedScene" uid="uid://coyadwixb1tyc" path="res://scenes/misc/fade_rect.tscn" id="4_7djs1"]
 
-[sub_resource type="Gradient" id="Gradient_x6hnt"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_6khdi"]
-gradient = SubResource("Gradient_x6hnt")
-
 [node name="house" type="Node2D" unique_id=1095470347]
 script = ExtResource("1_rntoh")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=676074988]
-show_behind_parent = true
-position = Vector2(82.5, 116.875)
-scale = Vector2(1.4023438, 210.25)
-texture = SubResource("GradientTexture1D_6khdi")
 
 [node name="floor" type="TileMapLayer" parent="." unique_id=1537357897]
 tile_map_data = PackedByteArray("AAAIAAgAAAAAAAEAAAAHAAgAAAAAAAEAAAAGAAcAAAAAAAEAAAAFAAcAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAkAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAHAAkAAAAAAAEAAAAIAAkAAAAAAAEAAAAGAAgAAAAAAAEAAAAFAAgAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAYAAAAAAAEAAAAGAAYAAAAAAAEAAAAHAAYAAAAAAAEAAAAIAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAEAAAADAAcAAAAAAAEAAAADAAgAAAAAAAEAAAADAAkAAAAAAAEAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAAGAAUAAAAAAAEAAAAHAAUAAAAAAAEAAAAIAAUAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAEAAAA=")
@@ -45,3 +33,7 @@ position = Vector2(88, 167)
 connected_scene = "town"
 
 [node name="fade_rect" parent="." unique_id=245137231 instance=ExtResource("4_7djs1")]
+offset_left = -196.0
+offset_top = -50.0
+offset_right = 422.0
+offset_bottom = 303.0

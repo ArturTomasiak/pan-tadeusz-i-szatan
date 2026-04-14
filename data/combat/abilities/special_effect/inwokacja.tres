@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_5jq1r")
 ability_type = 1
-effect_type = 2
+effect_type = 3
 display_name = "Inwokacja"
 description = "Usypia wszystkich wrogów na jedną turę"
 cost_type = 2

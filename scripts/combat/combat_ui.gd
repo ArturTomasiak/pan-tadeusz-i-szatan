@@ -4,7 +4,7 @@ signal action_selected(action_data : Dictionary)
 
 @onready var party_panel   : VBoxContainer  = $c/h/p2/party
 @onready var action_panel  : VBoxContainer  = $c/h/p1/action
-@onready var ability_panel : HFlowContainer = $c/h/p1/abilities
+@onready var ability_panel : HFlowContainer = $c/h/p1/m/abilities
 @onready var target_node   : Control = $target
 @onready var attack    : Button = $c/h/p1/action/attack
 @onready var abilities : Button = $c/h/p1/action/abilities
@@ -88,13 +88,11 @@ func show_abilities() -> void:
 	ability_panel.add_child(return_button)
 	for ability in current.character.abilities:
 		var usable : bool = true
-		var amount : int
 		if ability.ability_type == AbilityData.AbilityType.MAGIC:
 			if current.special_effect[AbilityData.SpecialEffect.NO_MAGIC] != 0:
 				usable = false
-		if   ability.cost_type == AbilityData.CostType.MP: amount = current.character.mp
-		elif ability.cost_type == AbilityData.CostType.HP: amount = current.character.hp
-		if ability.cost_amount > amount: usable = false
+		if !current.can_use_ability(ability):
+			usable = false
 		var button : Button = Button.new()
 		button.text = ability.display_name
 		if !usable: button.disabled = true
@@ -152,6 +150,10 @@ func show_targets(ability : AbilityData = null) -> void:
 		var local_pos  : Vector2 = target_node.get_global_transform_with_canvas().affine_inverse() * screen_pos
 		button.position = local_pos - Vector2(button.size.x * 0.5, button.size.y)
 		buttons.append(button)
-	if buttons.is_empty():return
+	if buttons.is_empty():
+		action_selected.emit({
+			"type": "error"
+		})
+		return
 	target_node.show()
 	buttons[0].call_deferred("grab_focus")

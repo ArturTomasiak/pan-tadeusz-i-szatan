@@ -61,6 +61,7 @@ func build_turn_order() -> void:
 	turn_order.sort_custom(func(a: Actor, b: Actor): return a.character.agility > b.character.agility)
 
 func combat() -> void:
+	refresh_actor_states()
 	if all_dead(party_actors):
 		victory = false
 		ongoing = false
@@ -77,11 +78,16 @@ func combat() -> void:
 	if actor.is_dead():
 		turn_index += 1
 		return
-	if actor.is_enemy:
+	if actor.special_effect[AbilityData.SpecialEffect.SLEEP] != 0:
+		actor.update_status()
+	elif actor.is_enemy:
 		await enemy_turn(actor)
 	else:
 		await player_turn(actor)
-	refresh_actor_states()
+	for entry in AbilityData.SpecialEffect.values():
+		if actor.special_effect[entry] != 0:
+			actor.special_effect[entry] -= 1
+			actor.update_status()
 	turn_index += 1
 	await get_tree().create_timer(1.0).timeout
 
@@ -104,7 +110,7 @@ func enemy_turn(actor : Actor) -> void:
 		CharacterTemplate.Targeting.HERD:
 			target = herd
 		CharacterTemplate.Targeting.FOCUS:
-			if actor.target.isdead():
+			if actor.target.is_dead():
 				actor.target = targets[game_state.rng.randi() % targets.size()]
 			target = actor.target
 		CharacterTemplate.Targeting.RANDOM:
@@ -113,15 +119,20 @@ func enemy_turn(actor : Actor) -> void:
 			if herd_focus.is_dead():
 				herd_focus = targets[game_state.rng.randi() % targets.size()]
 			target = herd_focus
-	perform_attack(actor, target)
+	var ability_amount : int = actor.character.abilities.size()
+	if ability_amount == 0 or game_state.rng.randi() % 2 == 0:
+		await perform_attack(actor, target)
+		return
+	var ability : AbilityData = actor.character.abilities[game_state.rng.randi() % ability_amount]
+	if actor.can_use_ability(ability): await perform_ability(actor, target, ability)
+	else: await perform_attack(actor, target)
 
 func damage_formula(attribute_val : int, mod : float = 1) -> float:
 	var base_damage : float = attribute_val * 2
-	return base_damage * game_state.rng.randi_range(mod, mod + 0.1)
+	return base_damage * mod
 
 func perform_attack(attacker : Actor, target : Actor) -> void:
 	await attacker.play_animation()
-	await target.play_hit_animation()
 	deal_damage(target, false, attacker.character.strength)
 
 func deal_damage (target : Actor, magic : bool, attribute_val : int, mod : float = 1) -> void:
@@ -129,14 +140,15 @@ func deal_damage (target : Actor, magic : bool, attribute_val : int, mod : float
 	if target.is_defending:
 		dmg = dmg * 0.6
 	if magic:
-		dmg += target.status_effect[AbilityData.StatusEffect.MAGIC] * (attribute_val/4)
+		dmg += target.status_effect[AbilityData.StatusEffect.MAGIC] * (attribute_val/4.0)
 	else:
-		dmg += target.status_effect[AbilityData.StatusEffect.PHYS] * (attribute_val/4)
-	var defence : float = target.character.defense / 3
-	defence += target.status_effect[AbilityData.StatusEffect.DEFENCE] * (defence/2)
+		dmg += target.status_effect[AbilityData.StatusEffect.PHYS] * (attribute_val/4.0)
+	var defence : float = target.character.defense / 3.0
+	defence += target.status_effect[AbilityData.StatusEffect.DEFENCE] * (defence/2.0)
 	dmg -= defence
-	target.character.hp -= int(round(dmg))
-	target.spawn_damage_label(dmg, Color.RED)
+	target.character.hp -= round(dmg)
+	target.spawn_damage_label(round(dmg), Color.RED)
+	await target.play_hit_animation()
 
 func damage(actor : Actor, target : Actor, ability : AbilityData) -> void:
 	var magic : bool
@@ -153,15 +165,13 @@ func damage(actor : Actor, target : Actor, ability : AbilityData) -> void:
 	else:              targets = living(enemy_actors)
 	if ability.target_type == AbilityData.TargetType.ALL_ENEMIES:
 		for _target in targets:
-			deal_damage(_target, magic, attribute_val, mod)
-			await _target.play_hit_animation()
+			await deal_damage(_target, magic, attribute_val, mod)
 	else:
 		var repetition : int = game_state.rng.randi_range(ability.repetition_from, ability.repetition_to)
 		for i in range (0, repetition):
 			if ability.target_type == AbilityData.TargetType.RANDOM:
 				target = targets[game_state.rng.randi() % targets.size()]
-			deal_damage(target, magic, attribute_val, mod)
-			await target.play_hit_animation()
+			await deal_damage(target, magic, attribute_val, mod)
 
 func get_target(target : Actor, ability : AbilityData) -> Array[Actor]:
 	match ability.target_type:
@@ -174,10 +184,10 @@ func get_target(target : Actor, ability : AbilityData) -> Array[Actor]:
 func heal(actor : Actor, target : Actor, ability : AbilityData) -> void:
 	var targets : Array[Actor] = get_target(target, ability)
 	for _target in targets:
-		_target.character.hp -= ability.heal_multiplier * actor.character.mysticism
+		_target.character.hp -= round(ability.heal_multiplier * actor.character.mysticism)
 		_target.spawn_damage_label(ability.heal, Color.GREEN)
 
-func status(actor : Actor, target : Actor, ability : AbilityData) -> void:
+func status(target : Actor, ability : AbilityData) -> void:
 	var targets : Array[Actor] = get_target(target, ability)
 	for _target in targets:
 		match ability.effect_delta:
@@ -197,6 +207,7 @@ func special(target : Actor, ability : AbilityData) -> void:
 	var targets : Array[Actor] = get_target(target, ability)
 	for _target in targets:
 		_target.special_effect[ability.special_effect] = ability.special_length
+		_target.update_status()
 
 func perform_ability(actor : Actor, target : Actor, ability : AbilityData) -> void:
 	if ability.cost_type == AbilityData.CostType.HP:
@@ -207,16 +218,16 @@ func perform_ability(actor : Actor, target : Actor, ability : AbilityData) -> vo
 	await actor.play_animation(ability.animation_name)
 	match ability.effect_type:
 		AbilityData.EffectType.DAMAGE:
-			damage(actor, target, ability)
+			await damage(actor, target, ability)
 		AbilityData.EffectType.HEAL:
 			heal(actor, target, ability)
 		AbilityData.EffectType.STATUS:
-			status(actor, target, ability)
+			status(target, ability)
 		AbilityData.EffectType.SPECIAL:
 			special(target, ability)
 		AbilityData.EffectType.DAMAGE_STATUS:
-			damage(actor, target, ability)
-			status(actor, target, ability)
+			await damage(actor, target, ability)
+			status(target, ability)
 
 func refresh_actor_states() -> void:
 	for actor in party_actors + enemy_actors:

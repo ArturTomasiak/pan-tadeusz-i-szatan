@@ -32,11 +32,19 @@ func setup(data: CharacterTemplate, enemy: bool) -> void:
 	sprite.sprite_frames = frames
 	sprite.play("idle")
 
+func can_use_ability(ability : AbilityData) -> bool:
+	var amount : int
+	if ability.ability_type == AbilityData.AbilityType.MAGIC and special_effect[AbilityData.SpecialEffect.NO_MAGIC] != 0:
+		return false
+	if   ability.cost_type == AbilityData.CostType.MP: amount = character.mp
+	elif ability.cost_type == AbilityData.CostType.HP: amount = character.hp
+	return ability.cost_amount < amount
+
 func is_dead() -> bool:
 	return character == null or character.hp <= 0
 
 func play_animation(_name : String = "") -> void:
-	if _name != "" and sprite.spriteframes.has_animation(_name):
+	if _name != "" and sprite.sprite_frames.has_animation(_name):
 		sprite.play(_name)
 		await sprite.animation_finished 
 	elif sprite.sprite_frames.has_animation("attack"):
@@ -107,7 +115,7 @@ func update_status() -> void:
 			_add_status_icon(path)
 	for effect_index in range(special_effect.size()):
 		if special_effect[effect_index] != 0:
-			var path : String = "res://data/icons/status/" + str(effect_index) + ".png"
+			var path : String = "res://data/icons/special/" + str(effect_index) + ".png"
 			if path != "":
 				_add_status_icon(path)
 	status.visible = status.get_child_count() > 0

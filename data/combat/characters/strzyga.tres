@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_ns2to"]
 [ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/templates/character_template.gd" id="2_bok7a"]
+[ext_resource type="Resource" uid="uid://bncmfnuia1rac" path="res://data/combat/abilities/damage/furia.tres" id="2_xif2a"]
 
 [resource]
 script = ExtResource("2_bok7a")
@@ -12,6 +13,7 @@ mysticism = 2
 defense = 10
 agility = 10
 display_name = "Strzyga"
+abilities = Array[ExtResource("1_ns2to")]([ExtResource("2_xif2a")])
 sound = 2
 sprite_path = "res://data/combat/characters/strzyga/"
 animations = Dictionary[String, int]({
