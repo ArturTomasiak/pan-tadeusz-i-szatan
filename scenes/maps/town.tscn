@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://bdcvp4ky8lssc"]
 
 [ext_resource type="PackedScene" uid="uid://cjhsx5r51i84o" path="res://scenes/misc/scene_trigger.tscn" id="1_1ke0g"]
-[ext_resource type="Script" uid="uid://diev2f83tors0" path="res://scripts/town.gd" id="1_qpn6l"]
+[ext_resource type="Script" uid="uid://diev2f83tors0" path="res://scripts/locations/town.gd" id="1_qpn6l"]
 [ext_resource type="TileSet" uid="uid://cja2nf8ea45nf" path="res://data/tilemaps & items/town.tres" id="2_o5v4h"]
 [ext_resource type="PackedScene" uid="uid://coyadwixb1tyc" path="res://scenes/misc/fade_rect.tscn" id="4_ojcgv"]
+[ext_resource type="PackedScene" uid="uid://ch5s4kubvvgyw" path="res://scenes/misc/dialogue_trigger.tscn" id="5_qveo5"]
 
 [node name="town" type="Node2D" unique_id=1214229309]
 y_sort_enabled = true
@@ -33,6 +34,9 @@ position = Vector2(228, 8)
 [node name="tavern" type="Marker2D" parent="entrance_marker" unique_id=1677175876]
 position = Vector2(-74, -41)
 
+[node name="house" type="Marker2D" parent="entrance_marker" unique_id=502820013]
+position = Vector2(-183, -24)
+
 [node name="scene_trigger_intro" parent="." unique_id=1279010707 instance=ExtResource("1_1ke0g")]
 top_level = true
 position = Vector2(260, 1)
@@ -41,7 +45,7 @@ connected_scene = "intro"
 
 [node name="scene_trigger_tavern" parent="." unique_id=10249233 instance=ExtResource("1_1ke0g")]
 top_level = true
-position = Vector2(-76, -63)
+position = Vector2(-76, -61)
 connected_scene = "tavern"
 
 [node name="fade_rect" parent="." unique_id=245137231 instance=ExtResource("4_ojcgv")]
@@ -49,3 +53,22 @@ offset_left = -447.0
 offset_top = -308.0
 offset_right = 552.0
 offset_bottom = 254.0
+
+[node name="DialogueTrigger" parent="." unique_id=41779543 instance=ExtResource("5_qveo5")]
+position = Vector2(26, -35)
+scale = Vector2(1, 0.76)
+file_name = "kosciol"
+
+[node name="DialogueTrigger2" parent="." unique_id=382544215 instance=ExtResource("5_qveo5")]
+position = Vector2(-152, -99)
+scale = Vector2(1, 0.76)
+file_name = "zamkniete"
+
+[node name="DialogueTrigger3" parent="." unique_id=1092415893 instance=ExtResource("5_qveo5")]
+position = Vector2(-216, -98)
+scale = Vector2(1, 0.76)
+file_name = "zamkniete"
+
+[node name="scene_trigger_house" parent="." unique_id=773896286 instance=ExtResource("1_1ke0g")]
+position = Vector2(-185, -37)
+connected_scene = "house"

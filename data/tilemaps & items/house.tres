@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" format=3 uid="uid://bbp2s5w1q7n1r"]
+
+[ext_resource type="Texture2D" uid="uid://btaefdirdsaj6" path="res://data/tilemaps & items/house.png" id="1_a6y5r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vaty4"]
+texture = ExtResource("1_a6y5r")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(5, 0)
+0:1/0 = 0
+4:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.6978817, -6.2950544, 8, -5.036044, 8, 4.3166103, -2.1583042, 3.2374573, -5.036044, 1.0791531)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.935337, 3.7770329, -5.755479, 4.3166103, 4.3166103, -8, 3.7770348, -8, 2.1583061)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vaty4")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://bncmfnuia1rac"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_t6wbq"]
+
+[resource]
+script = ExtResource("1_t6wbq")
+ability_type = 1
+display_name = "Furia"
+description = "Od dwóch do czterech ataków skierowanych w niezaplanowanym kierunku"
+cost_type = 2
+cost_amount = 30
+target_type = 5
+repetition_from = 2
+repetition_to = 4
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

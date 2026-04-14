@@ -31,6 +31,8 @@ runtime/balloon_path="res://scenes/ui/balloon.tscn"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/window_width_override=640
+window/size/window_height_override=360
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
@@ -95,7 +97,7 @@ esc={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://data/dialogues/jacek-intro.dialogue", "res://data/dialogues/intro.dialogue")
+locale/translations_pot_files=PackedStringArray("res://data/dialogues/jacek-intro.dialogue", "res://data/dialogues/intro.dialogue", "res://data/dialogues/kosciol.dialogue", "res://data/dialogues/zamkniete.dialogue")
 
 [physics]
 

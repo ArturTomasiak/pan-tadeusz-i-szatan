@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://cfq26s5ps0j2u"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_4x6vh"]
+
+[resource]
+script = ExtResource("1_4x6vh")
+display_name = "Krwawa Inkantacja"
+description = "Przeciwnik otrzymuje wysokie obrażenia"
+damage_multiplier = 2
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

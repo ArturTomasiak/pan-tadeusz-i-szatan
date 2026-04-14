@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://fywaukqcf8w6"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_akk7s"]
+
+[resource]
+script = ExtResource("1_akk7s")
+display_name = "Furia Żywiołów"
+description = "Wszyscy przeciwnicy otrzymują normalne obrażenia"
+cost_amount = 30
+target_type = 4
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

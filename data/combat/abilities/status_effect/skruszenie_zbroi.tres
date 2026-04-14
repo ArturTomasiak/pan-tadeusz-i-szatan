@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://cgv64nj4jhx07"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_br3hu"]
+
+[resource]
+script = ExtResource("1_br3hu")
+effect_type = 1
+display_name = "Skruszenie Zbroi"
+description = "Sprowadza obronę celu do najniższego stopnia"
+cost_amount = 40
+status_effect = 1
+effect_delta = 3
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

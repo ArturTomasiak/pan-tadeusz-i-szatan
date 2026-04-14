@@ -1,14 +1,39 @@
 [gd_scene format=3 uid="uid://bmosqsk3uiphq"]
 
-[ext_resource type="Script" uid="uid://cy0d20jfw0sec" path="res://scripts/actor.gd" id="1_0lwmd"]
+[ext_resource type="Script" uid="uid://cy0d20jfw0sec" path="res://scripts/combat/actor.gd" id="1_0lwmd"]
 
 [node name="actor" type="Node2D" unique_id=714073007]
 script = ExtResource("1_0lwmd")
 
-[node name="marker" type="Marker2D" parent="." unique_id=1123236789]
-position = Vector2(4, -12)
+[node name="name_marker" type="Marker2D" parent="." unique_id=1123236789]
+position = Vector2(0, -15)
 
 [node name="audio" type="AudioStreamPlayer2D" parent="." unique_id=218799969]
 volume_db = 1.0
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=828175238]
+
+[node name="damage" type="Label" parent="." unique_id=1576005167]
+offset_right = 40.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
+
+[node name="damage_pos1" type="Marker2D" parent="." unique_id=873427605]
+position = Vector2(-12, -25)
+
+[node name="damage_pos2" type="Marker2D" parent="." unique_id=156487374]
+position = Vector2(14, -16)
+
+[node name="damage_pos3" type="Marker2D" parent="." unique_id=485731802]
+position = Vector2(0, -21)
+
+[node name="status" type="HBoxContainer" parent="." unique_id=1353188437]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -26.0
+offset_right = 21.0
+offset_bottom = -18.0
+grow_vertical = 2

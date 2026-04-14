@@ -1,16 +1,19 @@
 [gd_resource type="Resource" script_class="CharacterTemplate" format=3 uid="uid://bqmu1gfyx64r1"]
 
-[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_6rf1d"]
-[ext_resource type="Resource" uid="uid://fywaukqcf8w6" path="res://data/combat/abilities/ognista_kula.tres" id="2_6b877"]
-[ext_resource type="Resource" uid="uid://cfq26s5ps0j2u" path="res://data/combat/abilities/magiczny_pocisk.tres" id="3_313l3"]
-[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/character_template.gd" id="4_u0x7v"]
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_6rf1d"]
+[ext_resource type="Resource" uid="uid://fywaukqcf8w6" path="res://data/combat/abilities/damage/furia_zywiolow.tres" id="2_6b877"]
+[ext_resource type="Resource" uid="uid://cfq26s5ps0j2u" path="res://data/combat/abilities/damage/krwawa_inkantacja.tres" id="3_313l3"]
+[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/templates/character_template.gd" id="4_u0x7v"]
 
 [resource]
 script = ExtResource("4_u0x7v")
-display_name = "Czarodziej"
-max_hp = 60
-abilities = Array[ExtResource("1_6rf1d")]([ExtResource("2_6b877"), ExtResource("3_313l3")])
+vitality = 8
+strength = 5
+intelligence = 12
+mysticism = 14
 agility = 7
+display_name = "Czarodziej"
+abilities = Array[ExtResource("1_6rf1d")]([ExtResource("2_6b877"), ExtResource("3_313l3")])
 sprite_path = "res://data/combat/characters/czarodziej/"
 animations = Dictionary[String, int]({
 "attack": 2,

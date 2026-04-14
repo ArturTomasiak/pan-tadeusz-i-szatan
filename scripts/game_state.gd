@@ -26,19 +26,28 @@ func _ready() -> void:
 		character.hp = character.max_hp
 		character.mp = character.max_mp
 	
-func add_party_member(name : String) -> void:
-	party.append(recruitable[name])
+func add_party_member(_name : String) -> void:
+	party.append(recruitable[_name])
 
-func start_battle(from_location: Node, enemies: Array[CharacterTemplate]) -> void:
+func start_battle(from_location: Node, enemy_arr: Array[CharacterTemplate]) -> void:
 	return_scene_path = from_location.scene_file_path
 	return_position = from_location.player.global_position
 	scene_manager.player = from_location.player
 	scene_manager.player.get_parent().remove_child(scene_manager.player)
 	current_enemies.clear()
-	for enemy in enemies:
+	for enemy in enemy_arr:
 		current_enemies.append(enemy.duplicate())
 	from_location.get_tree().call_deferred("change_scene_to_file", battle_scene)
 
 func end_battle(victory: bool) -> void:
 	if !victory: get_tree().quit()
+	for character in party:
+		if (character.hp > 0):
+			character.exp += 25
+			if character.exp >= character.next_lvl:
+				handle_level_up(character)
 	get_tree().change_scene_to_file(return_scene_path)
+
+func handle_level_up(character : CharacterTemplate) -> void:
+	character.exp = 0
+	character.next_level *= character.next_lvl_formula

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://n7lojsypywjk"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_mhaga"]
+
+[resource]
+script = ExtResource("1_mhaga")
+effect_type = 1
+display_name = "Zbroja Zaklęta"
+description = "Wzmacnia obronę całej drużyny o jeden poziom"
+cost_amount = 35
+target_type = 3
+status_effect = 1
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

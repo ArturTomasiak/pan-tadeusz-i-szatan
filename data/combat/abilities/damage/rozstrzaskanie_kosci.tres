@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://do0871o1w4lyj"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_vfy1e"]
+
+[resource]
+script = ExtResource("1_vfy1e")
+ability_type = 1
+effect_type = 4
+display_name = "Roztrzaskanie Kości"
+description = "Atak, który osłabi fizyczne zdolności przeciwnika"
+cost_type = 2
+cost_amount = 30
+status_effect = 3
+effect_delta = 1
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

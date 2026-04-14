@@ -64,5 +64,6 @@ func on_volume_changed(value: float) -> void:
 	if value <= 0.0:
 		AudioServer.set_bus_mute(bus_index, true)
 		return
-	var db: float = lerp(-10.0, 10.0, value / 100.0)
+	AudioServer.set_bus_mute(bus_index, false)
+	var db: float = lerp(-20.0, 20.0, value / 100.0)
 	AudioServer.set_bus_volume_db(bus_index, db)

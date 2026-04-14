@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://brmaqaf3oajvk"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_j55ah"]
+
+[resource]
+script = ExtResource("1_j55ah")
+effect_type = 2
+display_name = "Osłabienie"
+description = "Zmniejsza obronę pojedyńczego celu o jeden stopień"
+cost_amount = 15
+status_effect = 1
+effect_delta = 1
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

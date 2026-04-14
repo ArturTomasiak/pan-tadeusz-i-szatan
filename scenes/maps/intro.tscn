@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c14pvpp6ymfbe"]
 
 [ext_resource type="TileSet" uid="uid://bcw17tku7xdp2" path="res://data/tilemaps & items/forest.tres" id="1_05tvd"]
-[ext_resource type="Script" uid="uid://dt2dy3iapkjo6" path="res://scripts/intro.gd" id="1_o48bd"]
+[ext_resource type="Script" uid="uid://dt2dy3iapkjo6" path="res://scripts/locations/intro.gd" id="1_o48bd"]
 [ext_resource type="PackedScene" uid="uid://d0qh0cafkn8d1" path="res://scenes/characters/player.tscn" id="2_o48bd"]
 [ext_resource type="PackedScene" uid="uid://coyadwixb1tyc" path="res://scenes/misc/fade_rect.tscn" id="2_tpukc"]
 [ext_resource type="PackedScene" uid="uid://c40726ed7v3tl" path="res://scenes/characters/szatan.tscn" id="3_junep"]

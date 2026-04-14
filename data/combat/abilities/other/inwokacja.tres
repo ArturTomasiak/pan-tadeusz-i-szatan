@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://dp6r8l8chokv5"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_5jq1r"]
+
+[resource]
+script = ExtResource("1_5jq1r")
+ability_type = 1
+effect_type = 2
+display_name = "Inwokacja"
+description = "Usypia wszystkich wrogów na jedną turę"
+cost_type = 2
+cost_amount = 40
+target_type = 4
+special_effect = 1
+special_length = 1
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

@@ -23,5 +23,9 @@ Wciel się w rolę Tadeusza Soplicę, który wraz z Jackiem Soplicą próbuję u
 - 0.8.1
   - zmieniono soundtrack na autorski
   - poprawiono mixing audio
+- 0.8.2
+  - naprawiono slider dzwięku
+  - poprawki ui w walce
+  - zdolności
 ---
 Miłej zabawy!

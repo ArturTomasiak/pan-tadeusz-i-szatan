@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://o3r8ibsr6qbw"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_ucjgp"]
+
+[resource]
+script = ExtResource("1_ucjgp")
+ability_type = 1
+effect_type = 3
+display_name = "Mur"
+description = "Osłaniasz sojusznika, otrzymując za niego obrażenia przez następne dwie tury"
+cost_type = 0
+target_type = 1
+special_effect = 4
+special_length = 2
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

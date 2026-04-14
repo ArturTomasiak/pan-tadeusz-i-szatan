@@ -1,0 +1,47 @@
+[gd_scene format=4 uid="uid://6ev40phmtv1r"]
+
+[ext_resource type="Script" uid="uid://ppuxctw1u54n" path="res://scripts/locations/house.gd" id="1_rntoh"]
+[ext_resource type="TileSet" uid="uid://bbp2s5w1q7n1r" path="res://data/tilemaps & items/house.tres" id="1_x6hnt"]
+[ext_resource type="PackedScene" uid="uid://cjhsx5r51i84o" path="res://scenes/misc/scene_trigger.tscn" id="2_6khdi"]
+[ext_resource type="PackedScene" uid="uid://coyadwixb1tyc" path="res://scenes/misc/fade_rect.tscn" id="4_7djs1"]
+
+[sub_resource type="Gradient" id="Gradient_x6hnt"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6khdi"]
+gradient = SubResource("Gradient_x6hnt")
+
+[node name="house" type="Node2D" unique_id=1095470347]
+script = ExtResource("1_rntoh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=676074988]
+show_behind_parent = true
+position = Vector2(82.5, 116.875)
+scale = Vector2(1.4023438, 210.25)
+texture = SubResource("GradientTexture1D_6khdi")
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=1537357897]
+tile_map_data = PackedByteArray("AAAIAAgAAAAAAAEAAAAHAAgAAAAAAAEAAAAGAAcAAAAAAAEAAAAFAAcAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAkAAAAAAAEAAAAFAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAHAAkAAAAAAAEAAAAIAAkAAAAAAAEAAAAGAAgAAAAAAAEAAAAFAAgAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAYAAAAAAAEAAAAGAAYAAAAAAAEAAAAHAAYAAAAAAAEAAAAIAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAADAAUAAAAAAAEAAAADAAYAAAAAAAEAAAADAAcAAAAAAAEAAAADAAgAAAAAAAEAAAADAAkAAAAAAAEAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAAGAAUAAAAAAAEAAAAHAAUAAAAAAAEAAAAIAAUAAAAAAAEAAAACAAUAAAAAAAEAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAEAAAA=")
+tile_set = ExtResource("1_x6hnt")
+
+[node name="wall" type="TileMapLayer" parent="." unique_id=404473848]
+tile_map_data = PackedByteArray("AAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAACAAAAAAAGAAQAAAACAAAAAAADAAoAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAACAAAAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAGAAUAAAABAAAAAAAGAAYAAAABAAAAAAAGAAcAAAACAAAAAAAJAAkAAAABAAAAAAAJAAgAAAABAAAAAAAJAAcAAAABAAAAAAAJAAYAAAABAAAAAAAJAAUAAAABAAAAAAABAAUAAAABAAAAAAABAAYAAAABAAAAAAABAAcAAAABAAAAAAABAAgAAAABAAAAAAABAAkAAAABAAAAAAABAAoAAAACAAAAAAABAAQAAAACAAAAAAACAAQAAAAAAAAAAAACAAoAAAAAAAAAAAA=")
+tile_set = ExtResource("1_x6hnt")
+
+[node name="decoration" type="TileMapLayer" parent="." unique_id=1685465759]
+tile_map_data = PackedByteArray("AAAHAAUAAAAFAAAAAAADAAUAAAAEAAAAAAAEAAUAAAAEAAAAAAAFAAUAAAAEAAAAAAAIAAUAAAADAAAAAAAFAAoAAAABAAEAAAACAAUAAAAEAAAAAAADAAYAAAAEAAEAAAAEAAYAAAAEAAEAAAAEAAgAAAAEAAEAAAAEAAcAAAADAAEAAAADAAgAAAAEAAEAAAADAAcAAAACAAEAAAA=")
+tile_set = ExtResource("1_x6hnt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1424707200]
+position = Vector2(90, 123)
+
+[node name="entrance_marker" type="Node2D" parent="." unique_id=40035206]
+
+[node name="town" type="Marker2D" parent="entrance_marker" unique_id=1375240622]
+position = Vector2(88, 140)
+
+[node name="scene_trigger" parent="." unique_id=1279010707 instance=ExtResource("2_6khdi")]
+position = Vector2(88, 167)
+connected_scene = "town"
+
+[node name="fade_rect" parent="." unique_id=245137231 instance=ExtResource("4_7djs1")]

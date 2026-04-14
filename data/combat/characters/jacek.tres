@@ -1,13 +1,20 @@
 [gd_resource type="Resource" script_class="CharacterTemplate" format=3 uid="uid://b4yfgn5hgj2a0"]
 
-[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/ability_data.gd" id="1_m05ho"]
-[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/character_template.gd" id="2_myimp"]
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_m05ho"]
+[ext_resource type="Script" uid="uid://dmh4tebyg1edl" path="res://scripts/templates/character_template.gd" id="2_myimp"]
+[ext_resource type="Resource" uid="uid://do0871o1w4lyj" path="res://data/combat/abilities/damage/rozstrzaskanie_kosci.tres" id="2_ugp8i"]
+[ext_resource type="Resource" uid="uid://bncmfnuia1rac" path="res://data/combat/abilities/damage/furia.tres" id="3_6fekd"]
 
 [resource]
 script = ExtResource("2_myimp")
+vitality = 12
+strength = 12
+intelligence = 8
+mysticism = 2
+defense = 11
+agility = 10
 display_name = "Jacek Soplica"
-max_hp = 300
-agility = 9
+abilities = Array[ExtResource("1_m05ho")]([ExtResource("2_ugp8i"), ExtResource("3_6fekd")])
 sprite_path = "res://data/combat/characters/jacek/"
 animations = Dictionary[String, int]({
 "attack": 5,

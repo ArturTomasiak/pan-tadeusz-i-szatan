@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4gkaovjp1xv"]
 
-[ext_resource type="Script" uid="uid://bm6qudwqonp17" path="res://scripts/jacek.gd" id="1_j54cd"]
+[ext_resource type="Script" uid="uid://bm6qudwqonp17" path="res://scripts/npcs/jacek.gd" id="1_j54cd"]
 [ext_resource type="Texture2D" uid="uid://bmox4oquxclon" path="res://data/jacek/overworld.png" id="1_l8y28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j54cd"]

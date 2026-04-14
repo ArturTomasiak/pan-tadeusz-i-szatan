@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coyadwixb1tyc"]
 
-[ext_resource type="Script" uid="uid://sp65e7jh7jvh" path="res://scripts/fade_rect.gd" id="1_elj8t"]
+[ext_resource type="Script" uid="uid://sp65e7jh7jvh" path="res://scripts/locations/fade_rect.gd" id="1_elj8t"]
 
 [node name="fade_rect" type="ColorRect" unique_id=245137231]
 top_level = true

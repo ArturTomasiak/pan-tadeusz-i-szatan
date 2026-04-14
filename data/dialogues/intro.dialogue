@@ -18,7 +18,7 @@ Szatan: Jankiel ma żonę, i ona z narodu semickiego,\nLecz przodek jego zagrabi
 do dialogue_audio.play("intro/8", 15)
 Tadeusz Soplica: Mamże tedy talizman jej z dłoni wydarzyć?
 do dialogue_audio.play("intro/9", 0)
-Szatan: Masz ją porwać. Czysty chwalący yachwe jest mi cenny.
+Szatan: Masz ją porwać. Czysty chwalący yahwhe jest mi cenny.
 do dialogue_audio.play("intro/10", 15)
 Tadeusz Soplica: A wtenczas, czy wszystek umrę?
 do dialogue_audio.play("intro/11", 5)

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://lh1fwhlax8fj"]
+
+[ext_resource type="Script" uid="uid://bowu7m6ce8gka" path="res://scripts/templates/ability_data.gd" id="1_8jr0r"]
+
+[resource]
+script = ExtResource("1_8jr0r")
+effect_type = 2
+display_name = "Rozstrój"
+description = "Zmniejsza obrone wszystkich przeciwników celu o jeden stopień"
+cost_amount = 40
+target_type = 4
+status_effect = 1
+effect_delta = 1
+metadata/_custom_type_script = "uid://bowu7m6ce8gka"

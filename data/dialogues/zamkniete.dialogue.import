@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://q1bf138n1imr"
+path="res://.godot/imported/zamkniete.dialogue-b7e863a1a0a71aaf98a6552c9012dfc6.tres"
+
+[deps]
+
+source_file="res://data/dialogues/zamkniete.dialogue"
+dest_files=["res://.godot/imported/zamkniete.dialogue-b7e863a1a0a71aaf98a6552c9012dfc6.tres"]
+
+[params]
+
+defaults=true
