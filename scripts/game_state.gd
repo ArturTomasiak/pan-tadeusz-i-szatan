@@ -51,3 +51,8 @@ func end_battle(victory: bool) -> void:
 func handle_level_up(character : CharacterTemplate) -> void:
 	character.exp = 0
 	character.next_level *= character.next_lvl_formula
+
+func rest() -> void:
+	for member in party:
+		member.hp = member.max_hp
+		member.mp = member.max_mp

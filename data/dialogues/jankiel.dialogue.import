@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bias68k3mmsa3"
+path="res://.godot/imported/jankiel.dialogue-9bb8afae06e408e91754d08ca1cfb05b.tres"
+
+[deps]
+
+source_file="res://data/dialogues/jankiel.dialogue"
+dest_files=["res://.godot/imported/jankiel.dialogue-9bb8afae06e408e91754d08ca1cfb05b.tres"]
+
+[params]
+
+defaults=true

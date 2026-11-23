@@ -57,6 +57,7 @@ func update_party_status(active_character : CharacterTemplate = null) -> void:
 		var label  : Label = party_panel.get_child(i)
 		var member : CharacterTemplate = party[i].character
 		var name_text := member.display_name
+		label.add_theme_color_override("font_color", Color.BLACK)
 		if member == active_character:
 			label.add_theme_color_override("font_color", Color.YELLOW)
 		label.text = "%s  HP %d/%d  MP %d/%d" % [

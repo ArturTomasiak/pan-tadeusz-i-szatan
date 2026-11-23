@@ -1,0 +1,14 @@
+~ start
+Jankiel: Witaj młody
+- Chciałbym usnąć. => rest
+- Czy wiesz, gdzie bym mógł znaleźć Bogusławę? => boguslawa
+- Bywaj. => END
+~ boguslawa
+Jankiel: ...
+=> start
+~ rest
+do wrapper.fade_out()
+do game_state.rest()
+do wrapper.fade_in()
+=> start
+=> END

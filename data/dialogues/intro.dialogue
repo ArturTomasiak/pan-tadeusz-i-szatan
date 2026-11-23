@@ -1,6 +1,6 @@
 do dialogue_audio.play("intro/0", 15)
 Litwo! Ojczyzno moja! lecz cóż to się stało?\nJakby serce młodzieńca obłęd opętało.\nJuż nie w sadach się błąka, nie wzdycha ku Zosi,\nLecz nocą w borach dzikich tajemne księgi nosi.
-do wrapper.intro_fade_in()
+do wrapper.fade_in()
 do dialogue_audio.play("intro/1", 5)
 Szatan: Wzywałeś mię, kurwa.
 do dialogue_audio.play("intro/2")

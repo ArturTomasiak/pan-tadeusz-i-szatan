@@ -1,7 +1,10 @@
 extends Node
-func intro_fade_in() -> void:
+func fade_in() -> void:
 	var fade_rect = get_node_or_null("/root/intro/fade_rect")
-	if fade_rect: fade_rect.fade_in(1)
+	if fade_rect: await fade_rect.fade_in(1)
+func fade_out() -> void:
+	var fade_rect = get_node_or_null("/root/intro/fade_rect")
+	if fade_rect: await fade_rect.fade_out(1)
 func intro_god_visible() -> void:
 	var god = get_node_or_null("/root/intro/god")
 	god.visible = true
